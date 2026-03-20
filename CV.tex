@@ -1,12 +1,15 @@
 %-------------------------
-% CV in Latex
-% Versione di Giacomo D'angelo dal precedente fork di Jake Gutierrez
-%------------------------
+% CV Dangelo Giacomo
+%-------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[11pt]{article}
 
 \usepackage{latexsym}
-\usepackage[empty]{fullpage}
+\usepackage[a4paper,
+            left=1.5cm,
+            right=1.5cm,
+            top=1.5cm,
+            bottom=2cm]{geometry} % margini moderni
 \usepackage{titlesec}
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
@@ -17,7 +20,6 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \input{glyphtounicode}
-
 
 %----------FONT OPTIONS----------
 % sans-serif
@@ -30,19 +32,11 @@
 % \usepackage{CormorantGaramond}
 % \usepackage{charter}
 
-
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
 
@@ -55,7 +49,7 @@
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
+% Ensure that generated PDF is machine readable/ATS parsable
 \pdfgentounicode=1
 
 %-------------------------
@@ -98,7 +92,9 @@
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%-----------Intestazione-----------
 
 
 \begin{document}
@@ -106,7 +102,7 @@
 \begin{center}
     \textbf{\Huge \scshape Giacomo D'angelo} \\ \vspace{1pt}
     \small 3476873304 $|$ \small jacky\_1992@hotmail.it $|$ 
-    \href{https://www.linkedin.com/in/giacomo-d-angelo-57798493/}{\underline{LinkedIn}} $|$
+    \href{https://www.linkedin.com/in/giacomo-d-angelo-57798493/}{\underline{LinkedIn}} 
 \end{center}
 
 
@@ -115,7 +111,9 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Gruppo Iren}{2020 -- Presente}
+      {Gruppo Iren}{Genova, IT}
+      {CRM Specialist | ICT Project Manager}{Genova, IT}
+    \resumeSubSubheading
       {CRM Specialist | ICT Project Manager}{Genova, IT}
       \resumeItemListStart
         \resumeItem{Responsabile area CRM e integrazioni Extracommodity: gestisco con un collaboratore l'area CRM per tutte le progettualità al di fuori delle commodity, ovvero prodotti a efficientamento energetico, mobilità elettrica, connettività, polizze assicurative. Le tecnologie di mia competenza sono il CRM Salesforce (dedicato per l'area di business) e il middleware Mulesoft. Il team ha la responsabilità di coordinare cicli mensili e trimestrali di release per nuove iniziative, discutendo con il fornitore della soluzione tecnica e della stima economica}
