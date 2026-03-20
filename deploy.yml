@@ -1,0 +1,38 @@
+name: Build and Deploy CV
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: CV.tex
+
+      - name: Prepare public folder
+        run: |
+          mkdir public
+          cp *.pdf public/cv.pdf
+
+          echo '<!DOCTYPE html>
+          <html>
+          <head><title>CV</title></head>
+          <body style="margin:0">
+          <iframe src="cv.pdf" width="100%" height="100%"></iframe>
+          </body>
+          </html>' > public/index.html
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
