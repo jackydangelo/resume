@@ -16,15 +16,9 @@
 \usepackage{fancyhdr}
 \usepackage[italian]{babel}
 \usepackage{tabularx}
-\usepackage{parskip} % gestisce spaziatura verticale tra paragrafi/item
+\usepackage{parskip} 
 \input{glyphtounicode}
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
+\usepackage[sfdefault]{sourcesanspro}
 
 
 \pagestyle{fancy}
@@ -37,22 +31,20 @@
 
 \raggedbottom
 \raggedright
+\setlength{\parindent}{0pt}
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
 \titleformat{\section}
-  {\scshape\large\raggedright}{}{0em}{}[\color{black}\titlerule]
-\titlespacing*{\section}{0pt}{6pt}{5pt} 
+  {\large\bfseries\raggedright}{}{0em}{}[\color{black}\titlerule]
 
 \pdfgentounicode=1
 
-%-------------------------
 % Custom commands
 \newlist{resumeList}{itemize}{1}
-\setlist[resumeList]{leftmargin=0.15in, label={}, itemsep=2pt, parsep=3pt,topsep=10pt}
+\setlist[resumeList]{leftmargin=0.15in, label={}, itemsep=3pt, parsep=2pt, topsep=6pt}
 
 \newlist{resumeSubList}{itemize}{1}
-\setlist[resumeSubList]{leftmargin=0.3in, label=$\cdot$, itemsep=1pt, parsep=0pt}
+\setlist[resumeSubList]{leftmargin=0.3in, label=$\cdot$, itemsep=2pt, parsep=0pt}
 
 \newcommand{\resumeItem}[1]{\item \small #1}
 
@@ -60,14 +52,14 @@
   \item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
+      \textbf{\small #3} & {\small #4} \\    
     \end{tabular*}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
+    \textbf{\small #1} & {\small #2} \\
     \end{tabular*}
 }
 
@@ -94,7 +86,7 @@
 \begin{document}
 
 \begin{center}
-    \textbf{\Huge \scshape Giacomo D'angelo} \\
+    {\Huge \bfseries Giacomo D'Angelo}\\
     \small 3476873304 $|$ \small jacky\_1992@hotmail.it $|$ 
     \href{https://www.linkedin.com/in/giacomo-d-angelo-57798493/}{\underline{LinkedIn}} 
 \end{center}
@@ -105,9 +97,9 @@
 
 \resumeSubheading
   {Gruppo Iren}{Genova, IT}
-  {CRM Specialist | ICT Project Manager}{Genova, IT}
+  {CRM Specialist - ICT Project Manager}{Genova, IT}
 \resumeSubSubheading
-  {CRM Specialist | ICT Project Manager}{Genova, IT}
+  {CRM Specialist - ICT Project Manager}{Genova, IT}
 \resumeItemListStart
   \resumeItem{Responsabile area CRM e integrazioni Extracommodity: gestisco con un collaboratore l'area CRM per tutte le progettualità al di fuori delle commodity, ovvero prodotti a efficientamento energetico, mobilità elettrica, connettività, polizze assicurative. Le tecnologie di mia competenza sono il CRM Salesforce (dedicato per l'area di business) e il middleware Mulesoft. Il team ha la responsabilità di coordinare cicli mensili e trimestrali di release per nuove iniziative, discutendo con il fornitore della soluzione tecnica e della stima economica}
   \resumeItem{IT Project Manager: mi occupo di coordinare team dedicati per la riuscita di iniziative aziendali. La mia responsabilità copre la scelta architetturale delle tecnologie, il coinvolgimento degli stakeholder e la riuscita nei tempi e costi prefissati del progetto}
@@ -142,24 +134,24 @@
 \resumeSubHeadingListEnd
 
 %-----------Progetti-----------
-\section{Progetti Rilevanti}
-\resumeSubHeadingListStart
-\resumeProjectHeading
-    {\textbf{Multicompany} $|$ \emph{Presso Gruppo Iren}}{Luglio 2024 -- Presente}
-\resumeItemListStart
-  \resumeItem{Il progetto si pone l'obiettivo di abilitare alla vendita e alla gestione del cliente sulla filiera extracommodity le società di vendita Salerno Energia Vendita ed EGEA}
-  \resumeItem{Il mio ruolo è quello di coordinare per il dipartimento ICT il progetto, curandone ogni aspetto e supervisionandone ogni fase}
-  \resumeItem{L'effort complessivo del progetto è 575 giorni/uomo}
-\resumeItemListEnd
+%\section{Progetti Rilevanti}
+%\resumeSubHeadingListStart
+%\resumeProjectHeading
+%    {\textbf{Multicompany} $|$ \emph{Presso Gruppo Iren}}{Luglio %2024 -- Presente}
+%\resumeItemListStart
+%  \resumeItem{Il progetto si pone l'obiettivo di abilitare alla vendita e alla gestione del cliente sulla filiera extracommodity le società di vendita Salerno Energia Vendita ed EGEA}
+%  \resumeItem{Il mio ruolo è quello di coordinare per il dipartimento ICT il progetto, curandone ogni aspetto e supervisionandone ogni fase}
+%  \resumeItem{L'effort complessivo del progetto è 575 giorni/uomo}
+%\resumeItemListEnd
 
-\resumeProjectHeading
-    {\textbf{Insourcing Extracommodity} $|$ \emph{Presso Gruppo Iren}}{Gennaio 2022 -- Novembre 2022}
-\resumeItemListStart
-  \resumeItem{Il progetto si poneva l'obiettivo di rivedere tutta la mappa applicativa del perimetro extracommodity e di permetterne una comunicazione con la filiera commodity}
-  \resumeItem{Il mio ruolo è stato quello decisionale sulla scelta se mantenere i CRM separati o uniformarli, come evolvere il sistema di billing (Zuora), come integrare la filiera con gli applicativi del gruppo (incassi, credito, app,ecc.) e seguire tutte le fasi progettuali coordinando gli stakeholder di diverse aree di business e fornitori di ogni applicativo}
-  \resumeItem{L'effort complessivo del progetto è stato 3500 giorni/uomo}
-\resumeItemListEnd
-\resumeSubHeadingListEnd
+%\resumeProjectHeading
+%    {\textbf{Insourcing Extracommodity} $|$ \emph{Presso Gruppo Iren}}{Gennaio 2022 -- Novembre 2022}
+%\resumeItemListStart
+%  \resumeItem{Il progetto si poneva l'obiettivo di rivedere tutta la mappa applicativa del perimetro extracommodity e di permetterne una comunicazione con la filiera commodity}
+%  \resumeItem{Il mio ruolo è stato quello decisionale sulla scelta se mantenere i CRM separati o uniformarli, come evolvere il sistema di billing (Zuora), come integrare la filiera con gli applicativi del gruppo (incassi, credito, app,ecc.) e seguire tutte le fasi progettuali coordinando gli stakeholder di diverse aree di business e fornitori di ogni applicativo}
+%  \resumeItem{L'effort complessivo del progetto è stato 3500 giorni/uomo}
+%\resumeItemListEnd
+%\resumeSubHeadingListEnd
 
 %-----------Formazione-----------
 \section{Formazione}
@@ -180,7 +172,7 @@
 \section{Certificazioni}
 \begin{resumeList}
   \resumeItem{\textbf{Salesforce Administrator}, licenza numero 18399175}
-  \resumeItem{\textbf{Salesforce AI Associate}, licenza numero 5255976}
+%  \resumeItem{\textbf{Salesforce AI Associate}, licenza numero 5255976}
 \end{resumeList}
 
 %------------ Extra----------------------------
